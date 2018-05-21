@@ -2,4 +2,6 @@
     <string name="app_name">AndroidProject</string>
     <string name="login_error_email">1</string>
     <string name="login_error_password">2</string>
+    <string name="symbol_message">error_symbol</string>
+    <string name="try_again">try_again</string>
 </resources>

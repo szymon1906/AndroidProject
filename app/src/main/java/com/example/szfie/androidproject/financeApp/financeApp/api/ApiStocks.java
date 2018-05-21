@@ -6,9 +6,9 @@ package com.example.szfie.androidproject.financeApp.financeApp.api;
 
 public interface ApiStocks {
 
-    String BASE_URL = "https://api.iextrading.com/1.0";
+  //  String BASE_URL = "https://api.iextrading.com/1.0/";
 
-    String SYMBOL_DATA = BASE_URL + "/ref-data/symbols";
+  //  String SYMBOL_DATA = BASE_URL + "ref-data/symbols";
 
-    String STOCKS = BASE_URL + "/stock";
+   // String STOCKS = BASE_URL + "stock/";
 }
