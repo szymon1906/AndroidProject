@@ -44,8 +44,7 @@ public class Quotectivity extends AppCompatActivity {
 
     public static final String KEY_STOCK_SYMBOL ="symbol";
 
-    @BindView(R.id.item_quote_symbol)
-    TextView quoteSymbol;
+
 
     @BindView(R.id.item_name)
     TextView name;
@@ -87,14 +86,13 @@ public class Quotectivity extends AppCompatActivity {
                     Log.d("Testtest",response.body().toString());
 
                    Quote quote = response.body();
-                   quoteSymbol.setText(quote.getSymbol());
                    name.setText(quote.getName());
                    companyName.setText(quote.getCompanyName());
                    latestPrice.setText(quote.getLatestPrice());
                }
 
                else
-                  
+
                    try {
                        JSONObject jObjError = new JSONObject(response.errorBody().string());
                        verifyResponse(response.errorBody().string());

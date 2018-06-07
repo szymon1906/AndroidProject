@@ -35,8 +35,6 @@ public class StockActivity extends AppCompatActivity implements StockContract.Vi
     @BindView(R.id.symbol_reycler)
     RecyclerView stockRecycler;
 
-    @BindView(R.id.symbol_progress)
-    ProgressBar symbolProgess;
 
     @OnClick(R.id.symbol_button)
 
@@ -72,7 +70,7 @@ public class StockActivity extends AppCompatActivity implements StockContract.Vi
     @Override
     public void showData(List<Symbol> symbols) {
 
-        symbolProgess.setVisibility(View.INVISIBLE);
+
         stockRecycler.setVisibility(View.VISIBLE);
         stockAdapter.updateSymbols(symbols);
     }
