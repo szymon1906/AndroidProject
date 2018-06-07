@@ -16,10 +16,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '26.0.2'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
@@ -28,22 +33,16 @@ dependencies {
     // RecyclerView
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     //Java RX
-
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-
     // Gson
     implementation 'com.google.code.gson:gson:2.8.2'
-
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-
     // Gson converter
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-
     // Butterknife
-    implementation "com.jakewharton:butterknife:8.8.1"
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor "com.jakewharton:butterknife-compiler:8.8.1"
-
     // Timber
     implementation 'com.jakewharton.timber:timber:4.7.0'
 }

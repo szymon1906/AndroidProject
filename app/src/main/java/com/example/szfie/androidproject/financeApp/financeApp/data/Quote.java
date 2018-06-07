@@ -1,20 +1,31 @@
 package com.example.szfie.androidproject.financeApp.financeApp.data;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by szfie on 18.05.2018.
  */
 
 public class Quote {
 
+        private String symbol;
+     private String name;
+     private String companyName;
+    private String PrimaryExchange;
+    private String Technology;
+    private String latestPrice;
 
-     public String name;
-     public String CompanyName;
-    public String PrimaryExchange;
-    public String Technology;
-    public int latestPrice;
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public String getCompanyName() {
-        return CompanyName;
+        return companyName;
     }
 
     public String getPrimaryExchange() {
@@ -25,16 +36,16 @@ public class Quote {
         return Technology;
     }
 
-    public int getLatestPrice() {
+    public String getLatestPrice() {
         return latestPrice;
     }
 
-    public void setLatestPrice(int latestPrice) {
+    public void setLatestPrice(String latestPrice) {
         this.latestPrice = latestPrice;
     }
 
     public void setCompanyName(String companyName) {
-        CompanyName = companyName;
+        companyName = companyName;
     }
 
     public void setPrimaryExchange(String primaryExchange) {

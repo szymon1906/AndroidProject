@@ -37,23 +37,7 @@ public class StockPresenter implements StockContract.Presenter, LifecycleObserve
 
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    private void onCreate() {
-        api.getSymbols().enqueue(new Callback<List<Symbol>>() {
-            @Override
-            public void onResponse(Call<List<Symbol>> call, Response<List<Symbol>> response) {
-                if (response.isSuccessful()) {
-                    // we got data
-                    view.showData(response.body());
-                } else {
-                    // an error occurred - handle it
-                    view.showError();}}
-            @Override
-            public void onFailure(Call<List<Symbol> >call, Throwable t) {
-                // there was a connection error with server
-                Timber.e(t);}});}
-
-
-
+    private void onCreate() {getSymbols();}
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     private void onStart() {
@@ -65,15 +49,13 @@ public class StockPresenter implements StockContract.Presenter, LifecycleObserve
             @Override
             public void onResponse(Call<List<Symbol>> call, Response<List<Symbol>> response) {
                 if (response.isSuccessful()) {
-                    // we got data
                     view.showData(response.body());
                 } else {
-                    // an error occurred - handle it
+
                     view.showError();}}
 
             @Override
             public void onFailure(Call<List<Symbol> >call, Throwable t) {
-                // there was a connection error with server
                view.showError();}});}
 
 

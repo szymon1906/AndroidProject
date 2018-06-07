@@ -6,8 +6,8 @@ package com.example.szfie.androidproject.financeApp.financeApp.data;
 
 public class Symbol {
 
- public String symbol;
- public String name;
+ private String symbol;
+ private String name;
 
 
 

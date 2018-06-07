@@ -27,6 +27,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class StockActivity extends AppCompatActivity implements StockContract.View {
 
+
+
     private StockContract.Presenter presenter;
     private StockAdapter stockAdapter;
 
